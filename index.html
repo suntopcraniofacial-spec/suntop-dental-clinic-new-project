@@ -300,6 +300,109 @@
             font-size: 1.2rem;
         }
 
+        /* Gallery Section Styles */
+        .gallery-section {
+            background: linear-gradient(135deg, var(--bg-body), #e8f4f8);
+            padding: 5rem 0;
+            margin: 5rem 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(11, 30, 54, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 45px rgba(14, 165, 233, 0.2);
+        }
+        .gallery-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--accent);
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-caption {
+            padding: 2rem;
+            text-align: center;
+        }
+        .gallery-caption h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .gallery-caption p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Modal Gallery Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-content {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            animation: zoomIn 0.3s ease;
+        }
+        .modal-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .modal-close:hover {
+            color: var(--accent);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
         /* Contact Section Styles */
         .contact-section {
             background: linear-gradient(135deg, var(--primary), #0d47a1);
@@ -385,6 +488,12 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-image {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -394,6 +503,7 @@
         <div class="logo">Sun<span>top</span> Dental</div>
         <nav>
             <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
             <a href="#branches">Branches</a>
             <a href="#contact">Contact</a>
             <div class="social-nav">
@@ -468,6 +578,76 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Treatment Results Gallery</h2>
+            <p class="section-subtitle">See the transformations our patients have achieved with Suntop Dental</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openGalleryModal('Clinic Interior', '🏥')">
+                    <div class="gallery-image">
+                        <span>🏥</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Modern Clinic Facility</h4>
+                        <p>State-of-the-art dental equipment and comfortable treatment rooms</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Treatment Room', '🦷')">
+                    <div class="gallery-image">
+                        <span>🦷</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Professional Treatment Room</h4>
+                        <p>Equipped with the latest dental technology for your comfort</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Before Treatment', '😁')">
+                    <div class="gallery-image">
+                        <span>😁</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Before Treatment</h4>
+                        <p>Patient before cosmetic dental procedure</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Orthodontic Treatment', '🦷')">
+                    <div class="gallery-image">
+                        <span>✨</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Braces Application</h4>
+                        <p>Professional orthodontic alignment treatment in progress</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('After Whitening', '⭐')">
+                    <div class="gallery-image">
+                        <span>⭐</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Teeth Whitening Result</h4>
+                        <p>Bright, white smile after professional whitening</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Bridge Restoration', '🌟')">
+                    <div class="gallery-image">
+                        <span>🌟</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Dental Bridge</h4>
+                        <p>Successful restoration of missing teeth with dental bridge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Branches Section -->
     <section id="branches" class="container">
         <h2 class="section-title">Visit Us Today</h2>
@@ -525,5 +705,60 @@
         <p>&copy; 2024 Suntop Craniofacial and Dental Clinic. All rights reserved.</p>
         <p>Best Dental Clinic in Benin City | Expert Maxillofacial Surgery | Affordable Dental Treatments</p>
     </footer>
+
+    <!-- Modal for Gallery Lightbox -->
+    <div id="galleryModal" class="modal">
+        <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage" src="" alt="Gallery Image">
+        </div>
+    </div>
+
+    <script>
+        function openGalleryModal(title, emoji) {
+            const modal = document.getElementById('galleryModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            // Create a canvas with the emoji to display
+            const canvas = document.createElement('canvas');
+            canvas.width = 600;
+            canvas.height = 600;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'linear-gradient(135deg, #e0f2fe, #bae6fd)';
+            ctx.fillRect(0, 0, 600, 600);
+            ctx.font = 'bold 200px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(emoji, 300, 300);
+            
+            // Add title text
+            ctx.font = 'bold 40px Arial';
+            ctx.fillStyle = '#0b1e36';
+            ctx.fillText(title, 300, 550);
+            
+            modalImage.src = canvas.toDataURL();
+            modal.style.display = 'block';
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('galleryModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeGalleryModal();
+            }
+        });
+    </script>
 </body>
 </html>
