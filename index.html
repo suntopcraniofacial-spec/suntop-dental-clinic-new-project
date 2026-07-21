@@ -253,36 +253,31 @@
         }
         .badge-item {
             background: #f1f5f9;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            padding: 1.2rem 1.8rem;
+            border-radius: 10px;
             font-weight: 600;
             color: var(--primary);
-            transition: all 0.3s ease;
-        }
-        .badge-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+            border: 1px solid #cbd5e1;
         }
 
         /* Services Grid Layout */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
         }
         .service-card {
             background: var(--bg-card);
-            padding: 2.5rem 2rem;
+            padding: 2.2rem;
             border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(11, 30, 54, 0.08);
+            box-shadow: 0 4px 15px rgba(11, 30, 54, 0.05);
             border-top: 4px solid var(--accent);
             transition: all 0.3s ease;
         }
         .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 36px rgba(11, 30, 54, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
         }
         .service-card h3 {
             color: var(--primary);
@@ -291,331 +286,188 @@
         }
         .service-card p {
             color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
-        .service-card .price {
-            color: var(--accent);
+
+        /* Before & After Gallery Section */
+        .before-after-section {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 100%);
+            padding: 5rem 2rem;
+            border-radius: 16px;
+            margin-bottom: 5rem;
+        }
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .before-after-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(11, 30, 54, 0.1);
+            transition: all 0.3s ease;
+        }
+        .before-after-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(14, 165, 233, 0.2);
+        }
+        .before-after-images {
+            display: flex;
+            height: 300px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .before-after-images img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .before-after-label {
+            position: absolute;
+            top: 12px;
+            z-index: 10;
+            background: rgba(11, 30, 54, 0.9);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
             font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .before-label {
+            left: 12px;
+        }
+        .after-label {
+            right: 12px;
+        }
+        .before-after-info {
+            padding: 1.8rem;
+        }
+        .before-after-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
             font-size: 1.2rem;
+        }
+        .before-after-info .treatment-type {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .before-after-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .transformation-badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
         /* Testimonials Section */
         .testimonials-section {
-            background: linear-gradient(135deg, var(--bg-body), #e8f4f8);
-            padding: 5rem 0;
-            margin: 5rem 0;
+            padding: 4rem 2rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            margin-bottom: 5rem;
         }
-        .testimonials-grid {
+        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         .testimonial-card {
-            background: var(--bg-card);
-            padding: 2.5rem 2rem;
+            background: #f8fafc;
+            padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(11, 30, 54, 0.08);
             border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(11, 30, 54, 0.05);
             transition: all 0.3s ease;
         }
         .testimonial-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 36px rgba(11, 30, 54, 0.12);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.1);
         }
         .testimonial-header {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            gap: 1rem;
         }
         .testimonial-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: linear-gradient(to right, var(--accent), var(--teal-soft));
+            background: linear-gradient(135deg, var(--accent), var(--teal-soft));
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 1.8rem;
-            margin-right: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
-        .testimonial-info h4 {
+        .testimonial-name {
+            font-weight: 700;
             color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
-        .testimonial-info p {
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
+        .testimonial-service {
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
         .stars {
             color: #fbbf24;
+            margin-bottom: 0.8rem;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
         }
         .testimonial-text {
             color: var(--text-muted);
-            line-height: 1.8;
-            font-style: italic;
-            border-left: 3px solid var(--teal-soft);
-            padding-left: 1rem;
-        }
-        .price-comparison {
-            background: #f0f9ff;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border: 1px solid var(--accent);
-        }
-        .price-comparison strong {
-            color: var(--success-green);
-        }
-
-        /* Gallery Section Styles */
-        .gallery-section {
-            background: linear-gradient(135deg, var(--bg-body), #e8f4f8);
-            padding: 5rem 0;
-            margin: 5rem 0;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .gallery-item {
-            background: var(--bg-card);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(11, 30, 54, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-        .gallery-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 45px rgba(14, 165, 233, 0.2);
-        }
-        .gallery-image {
-            width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--accent);
-            overflow: hidden;
-            position: relative;
-        }
-        .gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .gallery-caption {
-            padding: 2rem;
-            text-align: center;
-        }
-        .gallery-caption h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        .gallery-caption p {
-            color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.7;
         }
-        .gallery-badge {
+        .ubth-badge {
             display: inline-block;
-            background: linear-gradient(to right, var(--accent), var(--teal-soft));
-            color: #fff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
             font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 0.8rem;
-        }
-
-        /* Modal Gallery Lightbox */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: fadeIn 0.3s ease;
-            overflow: auto;
-        }
-        .modal-content {
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            animation: zoomIn 0.3s ease;
-        }
-        .modal-image {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .modal-close:hover {
-            color: var(--accent);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes zoomIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* Video Gallery Section */
-        .video-section {
-            background: linear-gradient(135deg, #e8f4f8, var(--bg-body));
-            padding: 5rem 0;
-            margin: 5rem 0;
-        }
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-        .video-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(11, 30, 54, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .video-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 45px rgba(14, 165, 233, 0.2);
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .video-info {
-            padding: 2rem;
-        }
-        .video-info h4 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
             font-weight: 700;
-        }
-        .video-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .video-badge {
-            display: inline-block;
-            background: linear-gradient(to right, var(--accent), var(--teal-soft));
-            color: #fff;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
             margin-top: 1rem;
         }
 
-        /* Contact Section Styles */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary), #0d47a1);
-            color: #fff;
-            padding: 4rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 5rem;
-        }
-        .contact-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .contact-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        .contact-item h3 {
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-        .contact-item a {
-            color: var(--teal-soft);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .contact-item a:hover {
-            color: #fff;
-        }
-
-        /* Footer Styles */
+        /* Footer */
         footer {
             background: var(--primary);
-            color: #f1f5f9;
-            padding: 2rem;
+            color: #fff;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-top: 2px solid var(--accent);
         }
         footer p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        /* Responsive Mobile Design */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
             .hero p {
                 font-size: 1rem;
-            }
-            header {
-                flex-direction: column;
-                gap: 1rem;
             }
             nav {
                 flex-direction: column;
@@ -626,33 +478,18 @@
             }
             nav .social-nav {
                 border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.15);
                 padding-left: 0;
-                margin-left: 0;
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
                 padding-top: 1rem;
+                margin-left: 0;
+                width: 100%;
             }
             .section-title {
                 font-size: 1.8rem;
             }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            .gallery-image {
-                height: 200px;
-            }
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            .modal-close {
-                top: 10px;
-                right: 15px;
-                font-size: 24px;
+            .before-after-label {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.6rem;
             }
         }
     </style>
@@ -660,453 +497,254 @@
 <body>
     <!-- Navigation Header -->
     <header>
-        <div class="logo">Sun<span>top</span> Dental</div>
+        <div class="logo">Suntop <span>Dental</span></div>
         <nav>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#transformations">Before & After</a>
             <a href="#testimonials">Reviews</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#videos">Videos</a>
-            <a href="#branches">Branches</a>
             <a href="#contact">Contact</a>
             <div class="social-nav">
-                <a href="tel:+2349125890508">Call Uselu</a>
-                <a href="tel:+2349169058409">Call MMW</a>
+                <a href="tel:+2349125890508">📞 Uselu: +234-912-589-0508</a>
+                <a href="tel:+2349169058409">📞 Muritala: +234-916-905-8409</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Excellence in Dental & Craniofacial Care</h1>
-        <p>Premium dental treatments and specialized maxillofacial surgery at affordable prices in Benin City, Edo State</p>
-        <a href="#contact" class="btn">Book Appointment Now</a>
+    <section class="hero" id="home">
+        <h1>Transform Your Smile Today</h1>
+        <p>Expert Dental & Maxillofacial Care at Government Clinic Prices — No Queues, Same Day Service</p>
+        <a href="tel:+2349125890508" class="btn">📞 Book Appointment Now</a>
     </section>
 
     <!-- Accreditation Section -->
     <div class="container">
-        <div class="accreditation-section">
-            <h2 style="color: var(--primary); font-size: 1.6rem; margin-bottom: 0.5rem;">Licensed & Approved</h2>
-            <p style="color: var(--text-muted); margin-bottom: 1rem;">Ministry of Health Approved | NDA Certified</p>
+        <section class="accreditation-section">
+            <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">✅ Licensed & Approved</h2>
+            <p style="color: var(--text-muted); margin-bottom: 0;">Trusted by patients across Benin City</p>
             <div class="badge-grid">
-                <div class="badge-item">✓ Ministry of Health Licensed</div>
-                <div class="badge-item">✓ NDA Certified Clinic</div>
-                <div class="badge-item">✓ Expert Maxillofacial Surgeons</div>
-                <div class="badge-item">✓ State-of-the-Art Equipment</div>
+                <div class="badge-item">🏥 NDA Approved</div>
+                <div class="badge-item">🛡️ Ministry of Health Registered</div>
+                <div class="badge-item">⭐ 5-Star Rated</div>
+                <div class="badge-item">👨‍⚕️ Expert Dentists & Surgeons</div>
             </div>
-        </div>
+        </section>
     </div>
 
     <!-- Services Section -->
-    <section id="services" class="container">
+    <div class="container" id="services">
         <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">Comprehensive dental care from routine cleanings to advanced maxillofacial surgery</p>
-        
+        <p class="section-subtitle">Professional dental and maxillofacial treatments at affordable prices</p>
         <div class="services-grid">
             <div class="service-card">
-                <h3>Orthodontic Braces</h3>
-                <p>Professional teeth alignment with modern braces and clear aligners. Permanent solutions for perfect smile alignment.</p>
-                <div class="price">Starting from ₦15,000</div>
+                <h3>🦷 Orthodontic Braces</h3>
+                <p>Straighten your teeth with modern braces. Professional installation and monthly adjustments included.</p>
             </div>
-
             <div class="service-card">
-                <h3>Teeth Whitening</h3>
-                <p>Professional teeth whitening treatments for a brighter, whiter smile. Safe and effective cosmetic solutions.</p>
-                <div class="price">Starting from ₦8,000</div>
+                <h3>✨ Teeth Whitening</h3>
+                <p>Professional whitening treatments for a brighter, confident smile. Results in one session.</p>
             </div>
-
             <div class="service-card">
-                <h3>Teeth Filling & Extractions</h3>
-                <p>Painless filling treatments and safe tooth extractions with modern anesthesia and techniques.</p>
-                <div class="price">Starting from ₦5,000</div>
+                <h3>🪥 Teeth Cleaning & Polishing</h3>
+                <p>Deep cleaning and polishing to remove tartar and plaque. Prevents cavities and gum disease.</p>
             </div>
-
             <div class="service-card">
-                <h3>Deep Teeth Cleaning</h3>
-                <p>Professional teeth cleaning and polishing for optimal oral hygiene and health maintenance.</p>
-                <div class="price">Starting from ₦3,000</div>
+                <h3>🦷 Dental Fillings</h3>
+                <p>Painless cavity treatment with tooth-colored fillings that blend naturally with your teeth.</p>
             </div>
-
             <div class="service-card">
-                <h3>Dental Crowns & Bridges</h3>
-                <p>Restoration of damaged or missing teeth with custom-made crowns and bridges for natural appearance.</p>
-                <div class="price">Starting from ₦25,000</div>
+                <h3>👑 Dental Crowns & Bridges</h3>
+                <p>Restore damaged or missing teeth with custom-fitted crowns and bridges for a natural appearance.</p>
             </div>
-
             <div class="service-card">
-                <h3>Maxillofacial Surgery</h3>
-                <p>Advanced surgical treatment for jaw swelling, ameloblastoma, odontogenic keratocyst (OKC), and jaw cancer.</p>
-                <div class="price">Consultation Required</div>
+                <h3>🔧 Maxillofacial Surgery</h3>
+                <p>Expert treatment for jaw swelling, tumors (ameloblastoma, OKC), and jaw cancer by specialized surgeons.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Patient Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">What Our Patients Say</h2>
-            <p class="section-subtitle">Real stories from satisfied patients who chose Suntop Dental</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👨</div>
-                        <div class="testimonial-info">
-                            <h4>Chisom Okoro</h4>
-                            <p>Teeth Whitening Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "The treatment price is exactly similar to UBTH and other government institutions. Why waste time in long queues? I just came in and went out. Fast, efficient, and affordable service!"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ Same Price as UBTH</strong> • No Long Queues • Same Day Service
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👩</div>
-                        <div class="testimonial-info">
-                            <h4>Amira Hassan</h4>
-                            <p>Dental Crown Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "I compared prices with UBTH before coming here. Suntop charges the same but I didn't spend hours waiting. Professional care, affordable pricing—this is what you should expect!"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ UBTH Price Match</strong> • No Waiting Time • Expert Doctors
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👨</div>
-                        <div class="testimonial-info">
-                            <h4>Emeka Okonkwo</h4>
-                            <p>Teeth Extraction Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "My brother was spending 6 hours at UBTH for the same procedure. Here at Suntop, I got the same treatment at the same price and finished in 45 minutes. No regrets!"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ Government Clinic Pricing</strong> • Fast Turnaround • Quality Care
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👩</div>
-                        <div class="testimonial-info">
-                            <h4>Zainab Ahmed</h4>
-                            <p>Braces Treatment Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "I was paying the same amount at UBTH but dealing with waiting lists and delays. Suntop offered the exact same price with professional attention. Why would I waste my time elsewhere?"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ Same Cost as UBTH</strong> • Better Service • Shorter Wait
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👨</div>
-                        <div class="testimonial-info">
-                            <h4>David Eze</h4>
-                            <p>Cleaning & Polishing Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "Compared prices—Suntop matches UBTH rates perfectly. But here, I'm treated like a priority customer instead of a number in a queue. Best decision I made!"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ UBTH Competitive Pricing</strong> • Priority Treatment • Professional Team
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👩</div>
-                        <div class="testimonial-info">
-                            <h4>Joy Adekunle</h4>
-                            <p>Filling Treatment Patient</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <div class="testimonial-text">
-                        "Government institution pricing with premium service quality! Why spend all day at UBTH when Suntop offers the same fees with modern equipment and zero queue time?"
-                    </div>
-                    <div class="price-comparison">
-                        <strong>✓ Equal to Government Prices</strong> • Modern Facility • Quick Service
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2 class="section-title">Treatment Results Gallery</h2>
-            <p class="section-subtitle">See the transformations our patients have achieved with Suntop Dental</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openGalleryModal('Dental Extraction Procedure')">
-                    <div class="gallery-image">🔬</div>
-                    <div class="gallery-caption">
-                        <h4>Dental Extraction Procedure</h4>
-                        <p>Professional tooth extraction technique with precision and patient comfort</p>
-                        <span class="gallery-badge">Surgical</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Bridge Restoration Case Study')">
-                    <div class="gallery-image">👑</div>
-                    <div class="gallery-caption">
-                        <h4>Bridge Restoration Case Study</h4>
-                        <p>Before and after: Successful dental bridge installation for missing teeth</p>
-                        <span class="gallery-badge">Restoration</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Sterilization Equipment')">
-                    <div class="gallery-image">⚙️</div>
-                    <div class="gallery-caption">
-                        <h4>Sterilization Equipment</h4>
-                        <p>High-pressure autoclave for surgical instrument sterilization and safety</p>
-                        <span class="gallery-badge">Equipment</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Modern Treatment Chair')">
-                    <div class="gallery-image">💺</div>
-                    <div class="gallery-caption">
-                        <h4>Modern Treatment Chair</h4>
-                        <p>State-of-the-art dental treatment chair with digital controls</p>
-                        <span class="gallery-badge">Facility</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Gum Treatment Before & After')">
-                    <div class="gallery-image">✨</div>
-                    <div class="gallery-caption">
-                        <h4>Gum Treatment Before & After</h4>
-                        <p>Professional gum disease treatment and healthy gum restoration</p>
-                        <span class="gallery-badge">Periodontal</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Teeth Whitening Transformation')">
-                    <div class="gallery-image">⭐</div>
-                    <div class="gallery-caption">
-                        <h4>Teeth Whitening Transformation</h4>
-                        <p>Professional whitening results showing before & after comparison</p>
-                        <span class="gallery-badge">Cosmetic</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Gallery Section -->
-    <section id="videos" class="video-section">
-        <div class="container">
-            <h2 class="section-title">Treatment Videos</h2>
-            <p class="section-subtitle">Watch our professional dental treatment procedures and patient testimonials</p>
-            
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Professional Teeth Cleaning</h4>
-                        <p>Watch our expert team perform professional dental cleaning and polishing procedures</p>
-                        <span class="video-badge">🎬 Educational</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Teeth Whitening Procedure</h4>
-                        <p>See the step-by-step process of our professional teeth whitening treatment</p>
-                        <span class="video-badge">✨ Cosmetic</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Braces Installation Guide</h4>
-                        <p>Learn about our orthodontic braces installation process and treatment timeline</p>
-                        <span class="video-badge">🦷 Orthodontics</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Patient Testimonial</h4>
-                        <p>Hear from our satisfied patients about their experience at Suntop Dental</p>
-                        <span class="video-badge">💬 Testimonial</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Dental Crown Placement</h4>
-                        <p>Detailed video showing the crown restoration procedure step-by-step</p>
-                        <span class="video-badge">👑 Restoration</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Clinic Tour</h4>
-                        <p>Virtual tour of our modern dental clinic facilities and equipment</p>
-                        <span class="video-badge">🏥 Facility</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Branches Section -->
-    <section id="branches" class="container">
-        <h2 class="section-title">Visit Us Today</h2>
-        <p class="section-subtitle">Two convenient locations in Benin City</p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🏢 Uselu Branch</h3>
-                <p><strong>Address:</strong> 127 Uselu, Success Pharmacy Building, Opposite NNPC, Benin City</p>
-                <p style="margin-top: 1rem;"><strong>Hours:</strong></p>
-                <p>Mon-Sat: 8:00 AM - 5:00 PM<br>Sun: Emergency Only</p>
-                <p style="margin-top: 1rem; color: var(--accent); font-weight: 600;">
-                    <a href="tel:+2349125890508" style="color: var(--accent); text-decoration: none;">📞 +234 912 589 0508</a>
-                </p>
-            </div>
-
-            <div class="service-card">
-                <h3>🏢 Muritala Muhammad Way Branch</h3>
-                <p><strong>Address:</strong> 29 Muritala Muhammad Way, Opposite MTN, Benin City</p>
-                <p style="margin-top: 1rem;"><strong>Hours:</strong></p>
-                <p>Mon-Sat: 8:00 AM - 5:00 PM<br>Sun: Emergency Only</p>
-                <p style="margin-top: 1rem; color: var(--accent); font-weight: 600;">
-                    <a href="tel:+2349169058409" style="color: var(--accent); text-decoration: none;">📞 +234 916 905 8409</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p style="font-size: 1.1rem; opacity: 0.9;">Ready to transform your smile? Contact us today!</p>
-        
-        <div class="contact-grid">
-            <div class="contact-item">
-                <h3>📞 Call Us</h3>
-                <p>Uselu: <a href="tel:+2349125890508">+234 912 589 0508</a></p>
-                <p>MMW: <a href="tel:+2349169058409">+234 916 905 8409</a></p>
-            </div>
-            <div class="contact-item">
-                <h3>📍 Visit Us</h3>
-                <p>Uselu Branch & Muritala Muhammad Way Branch</p>
-                <p>Benin City, Edo State, Nigeria</p>
-            </div>
-            <div class="contact-item">
-                <h3>🕐 Hours</h3>
-                <p>Mon-Sat: 8:00 AM - 5:00 PM</p>
-                <p>Sun: Emergency Services Only</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Suntop Craniofacial and Dental Clinic. All rights reserved.</p>
-        <p>Best Dental Clinic in Benin City | Expert Maxillofacial Surgery | Affordable Dental Treatments</p>
-    </footer>
-
-    <!-- Modal for Gallery Lightbox -->
-    <div id="galleryModal" class="modal">
-        <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
-        <div class="modal-content">
-            <img class="modal-image" id="modalImage" src="" alt="Gallery Image">
         </div>
     </div>
 
-    <script>
-        function openGalleryModal(title) {
-            const modal = document.getElementById('galleryModal');
-            const modalImage = document.getElementById('modalImage');
+    <!-- Before & After Transformations -->
+    <div class="container" id="transformations">
+        <section class="before-after-section">
+            <h2 class="section-title" style="color: var(--primary); margin-bottom: 0.5rem;">✨ Real Transformations</h2>
+            <p class="section-subtitle">See the stunning results our patients have achieved</p>
             
-            const canvas = document.createElement('canvas');
-            canvas.width = 800;
-            canvas.height = 600;
-            const ctx = canvas.getContext('2d');
-            
-            const gradient = ctx.createLinearGradient(0, 0, 800, 600);
-            gradient.addColorStop(0, '#e0f2fe');
-            gradient.addColorStop(1, '#bae6fd');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, 800, 600);
-            
-            ctx.font = 'bold 36px Arial';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = '#0b1e36';
-            ctx.fillText(title, 400, 300);
-            
-            ctx.strokeStyle = '#0ea5e9';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.arc(400, 150, 40, 0, Math.PI * 2);
-            ctx.stroke();
-            
-            modalImage.src = canvas.toDataURL();
-            modal.style.display = 'block';
-        }
+            <div class="before-after-grid">
+                <!-- Transformation 1: Diastema Closure -->
+                <div class="before-after-card">
+                    <div class="before-after-images">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23f3e5ab' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EBefore Image%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EGap Between Front Teeth%3C/text%3E%3C/svg%3E" alt="Before - Diastema">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23e8f5e9' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EAfter Image%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EPerfect Alignment%3C/text%3E%3C/svg%3E" alt="After - Perfect Smile">
+                    </div>
+                    <div class="before-label">BEFORE</div>
+                    <div class="after-label">AFTER</div>
+                    <div class="before-after-info">
+                        <h4>Diastema (Gap) Closure</h4>
+                        <span class="treatment-type">Cosmetic Dentistry</span>
+                        <p>Closed the gap between front teeth using modern bonding techniques for a perfect smile.</p>
+                        <div class="transformation-badge">✅ Treatment: 2 Weeks | Patient Satisfaction: 100%</div>
+                    </div>
+                </div>
 
-        function closeGalleryModal() {
-            const modal = document.getElementById('galleryModal');
-            modal.style.display = 'none';
-        }
+                <!-- Transformation 2: Teeth Whitening -->
+                <div class="before-after-card">
+                    <div class="before-after-images">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23d7ccc8' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EBefore%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EStained Teeth%3C/text%3E%3C/svg%3E" alt="Before - Stained Teeth">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23fffef0' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EAfter%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EBright White Smile%3C/text%3E%3C/svg%3E" alt="After - Bright Teeth">
+                    </div>
+                    <div class="before-label">BEFORE</div>
+                    <div class="after-label">AFTER</div>
+                    <div class="before-after-info">
+                        <h4>Professional Teeth Whitening</h4>
+                        <span class="treatment-type">Cosmetic</span>
+                        <p>Dramatic whitening results from years of stains. Professional treatment in just one session.</p>
+                        <div class="transformation-badge">✅ Duration: 1 Hour | Results Last: 18+ Months</div>
+                    </div>
+                </div>
 
-        window.onclick = function(event) {
-            const modal = document.getElementById('galleryModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
+                <!-- Transformation 3: Braces -->
+                <div class="before-after-card">
+                    <div class="before-after-images">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23f3e5ab' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EBefore%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EMisaligned Teeth%3C/text%3E%3C/svg%3E" alt="Before - Misaligned">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%23e8f5e9' width='200' height='300'/%3E%3Ctext x='50' y='150' font-size='14' fill='%23333' text-anchor='middle'%3EAfter%3C/text%3E%3Ctext x='50' y='170' font-size='12' fill='%23666'%3EPerfect Alignment%3C/text%3E%3C/svg%3E" alt="After - Aligned Teeth">
+                    </div>
+                    <div class="before-label">BEFORE</div>
+                    <div class="after-label">AFTER</div>
+                    <div class="before-after-info">
+                        <h4>Orthodontic Braces</h4>
+                        <span class="treatment-type">Orthodontics</span>
+                        <p>Complete teeth alignment with modern braces. Customized treatment plan for each patient.</p>
+                        <div class="transformation-badge">✅ Treatment: 18-24 Months | Affordable Payments Available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeGalleryModal();
-            }
-        });
-    </script>
+    <!-- Testimonials Section -->
+    <div class="container" id="testimonials">
+        <section class="testimonials-section">
+            <h2 class="section-title">⭐ What Our Patients Say</h2>
+            <p class="section-subtitle">Real experiences from satisfied patients at Suntop Dental</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">C</div>
+                        <div>
+                            <div class="testimonial-name">Chisom Okoro</div>
+                            <div class="testimonial-service">Teeth Whitening</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Same price as UBTH, but no long queues! Got my teeth whitened in and out quickly. Professional service at government clinic prices!"</p>
+                    <span class="ubth-badge">UBTH Price Match ✓</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div>
+                            <div class="testimonial-name">Amira Hassan</div>
+                            <div class="testimonial-service">Dental Crown</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Compared my quote with UBTH - exactly the same price! But here I got priority treatment instead of waiting 6 hours in a queue."</p>
+                    <span class="ubth-badge">Equal to Government Prices</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">E</div>
+                        <div>
+                            <div class="testimonial-name">Emeka Okonkwo</div>
+                            <div class="testimonial-service">Teeth Extraction</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"6 hours waiting at UBTH vs 45 minutes here at the exact same price! Best decision ever. Expert doctors and no hassle."</p>
+                    <span class="ubth-badge">Same Price, Faster Service</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">Z</div>
+                        <div>
+                            <div class="testimonial-name">Zainab Ahmed</div>
+                            <div class="testimonial-service">Braces Treatment</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Why waste time in long government clinic queues? Same cost, better service, and they actually care about your comfort here."</p>
+                    <span class="ubth-badge">Government Clinic Pricing</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">D</div>
+                        <div>
+                            <div class="testimonial-name">David Eze</div>
+                            <div class="testimonial-service">Cleaning & Polishing</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a clinic where I'm treated as a priority patient, not just a number in a queue! And the cost is the same as UBTH."</p>
+                    <span class="ubth-badge">UBTH Price Match ✓</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">J</div>
+                        <div>
+                            <div class="testimonial-name">Joy Adekunle</div>
+                            <div class="testimonial-service">Filling Treatment</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Best dental clinic in Benin! Government clinic pricing with premium service quality. No delays, no excuses. Highly recommended!"</p>
+                    <span class="ubth-badge">Equal to Government Prices</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <section style="background: linear-gradient(135deg, #0b1e36, #0369a1); padding: 4rem; border-radius: 16px; color: #fff; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">📍 Visit Us Today</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Two convenient locations in Benin City</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="margin-bottom: 1rem;">🏥 Uselu Branch</h3>
+                    <p style="margin-bottom: 0.5rem;">127 Uselu, Success Pharmacy Building</p>
+                    <p style="margin-bottom: 1.2rem;">Opposite NNPC, Benin City</p>
+                    <p style="margin-bottom: 0.5rem; font-weight: 700;">📞 +234-912-589-0508</p>
+                    <p style="font-size: 0.9rem;">Mon-Sat: 8:00 AM - 5:00 PM</p>
+                    <p style="font-size: 0.9rem;">Sun: Emergency Only</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="margin-bottom: 1rem;">🏥 Muritala Muhammad Way Branch</h3>
+                    <p style="margin-bottom: 0.5rem;">29 Muritala Muhammad Way</p>
+                    <p style="margin-bottom: 1.2rem;">Opposite MTN, Benin City</p>
+                    <p style="margin-bottom: 0.5rem; font-weight: 700;">📞 +234-916-905-8409</p>
+                    <p style="font-size: 0.9rem;">Mon-Sat: 8:00 AM - 5:00 PM</p>
+                    <p style="font-size: 0.9rem;">Sun: Emergency Only</p>
+                </div>
+            </div>
+
+            <a href="tel:+2349125890508" style="background: linear-gradient(to right, #0ea5e9, #06b6d4); color: #fff; padding: 1rem 2.5rem; text-decoration: none; font-weight: 700; border-radius: 30px; display: inline-block; margin-top: 1rem;">📞 Call Now for Appointment</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Suntop Craniofacial & Dental Clinic. All rights reserved.</p>
+        <p>🏥 NDA Approved | Ministry of Health Registered | 5-Star Patient Satisfaction</p>
+        <p style="font-size: 0.9rem; color: #cbd5e1;">Best Dental Clinic in Benin City • Affordable Prices • Expert Care • No Queues</p>
+    </footer>
 </body>
 </html>
