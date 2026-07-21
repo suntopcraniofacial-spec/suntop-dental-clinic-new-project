@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Treatment Prices | Suntop Craniofacial & Dental Clinic</title>
+    <meta name="description" content="Affordable dental treatment prices at Suntop Dental Clinic in Benin City. See our transparent pricing for extractions, root canal therapy, fillings, scaling, and teeth whitening.">
+    <meta name="keywords" content="dental prices benin, teeth extraction cost, root canal therapy price, dental filling cost, teeth cleaning price, teeth whitening benin">
+    
+    <style>
+        /* Modern Premium Palette Variables */
+        :root {
+            --primary: #0b1e36;       /* Elite Deep Luxury Navy */
+            --accent: #0ea5e9;        /* Bright Clinical Medical Sky Blue */
+            --teal-soft: #06b6d4;     /* Vibrant Pure Tech Teal */
+            --bg-body: #f8fafc;       /* Crisp Sterile Clean Background */
+            --bg-card: #ffffff;       /* Pure White Elevated Blocks */
+            --text-main: #0f172a;     /* Sharp Premium Charcoal Body Text */
+            --text-muted: #475569;    /* Balanced Slate Secondary Subtitles */
+            --success-green: #22c55e; /* Vibrant Global WhatsApp Green */
+            --warning-orange: #f97316;
+            --danger-red: #dc2626;
+        }
+
+        /* Global Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+        
+        /* Navigation Bar */
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(11, 30, 54, 0.15);
+            border-bottom: 2px solid var(--accent);
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        header .logo span {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #071424 0%, #0b1e36 40%, #0369a1 100%);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+            box-shadow: inset 0 -10px 30px rgba(0,0,0,0.15);
+            border-bottom: 4px solid var(--teal-soft);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 0.5rem 0;
+            color: var(--primary);
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Price Table */
+        .price-table-wrapper {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(11, 30, 54, 0.05);
+            margin-bottom: 3rem;
+            overflow-x: auto;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        
+        .price-table thead {
+            background: linear-gradient(135deg, #0b1e36, #0369a1);
+            color: #fff;
+        }
+        
+        .price-table th {
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+        }
+        
+        .price-table tbody tr {
+            border-bottom: 1px solid #e2e8f0;
+            transition: background-color 0.3s ease;
+        }
+        
+        .price-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+        
+        .price-table td {
+            padding: 1.2rem;
+            vertical-align: middle;
+        }
+        
+        .service-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        
+        .service-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .price-amount {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--success-green);
+        }
+        
+        .price-currency {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        /* Category Section */
+        .category-section {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #eef6ff 0%, #e0f2fe 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .info-box p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            background: linear-gradient(to right, var(--accent), var(--teal-soft));
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(14, 165, 233, 0.6);
+            filter: brightness(1.1);
+        }
+        
+        /* Discount Banner */
+        .discount-banner {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .discount-banner h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .discount-banner p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Price Comparison */
+        .comparison-box {
+            background: var(--bg-card);
+            border: 2px solid var(--accent);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .comparison-item h4 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .comparison-item .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--success-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-item .label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact CTA Section */
+        .contact-cta {
+            background: linear-gradient(135deg, #0b1e36, #0369a1);
+            color: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .contact-cta h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-cta p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 2px solid var(--accent);
+            margin-top: 4rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .price-table-wrapper {
+                padding: 1rem;
+            }
+            
+            .price-table th,
+            .price-table td {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .service-name {
+                font-size: 0.95rem;
+            }
+            
+            .price-amount {
+                font-size: 1.1rem;
+            }
+            
+            .comparison-box {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <div class="logo">Suntop <span>Dental</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#testimonials">Reviews</a>
+            <a href="prices.html" style="color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem;">Prices</a>
+            <a href="booking-form.html">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>💰 Transparent & Affordable Pricing</h1>
+        <p>Government clinic prices with premium service quality — No hidden charges, no surprises</p>
+    </section>
+
+    <div class="container">
+        <!-- Info Box -->
+        <div class="info-box">
+            <h3>✅ Why Choose Suntop Dental?</h3>
+            <p>We offer the <strong>exact same prices as government clinics (UBTH)</strong> but with better service, shorter wait times, and experienced dentists. All prices are transparent with no hidden charges.</p>
+        </div>
+
+        <!-- Discount Banner -->
+        <div class="discount-banner">
+            <h3>🎉 Package Discounts Available!</h3>
+            <p>Get 10-15% discount on multiple treatments. Call us for customized treatment packages.</p>
+            <a href="tel:+2349125890508" class="cta-button">📞 Call for Special Packages</a>
+        </div>
+
+        <!-- EXTRACTION SERVICES -->
+        <section class="category-section">
+            <h2 class="category-title">🦷 Extraction Services</h2>
+            
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service</th>
+                            <th style="width: 40%; text-align: right;">Price (₦)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="service-name">Simple Extraction</div>
+                                <div class="service-description">Removal of tooth without complications</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦45,000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="service-name">Surgical Extraction</div>
+                                <div class="service-description">Complex removal requiring surgical technique (impacted/difficult teeth)</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦80,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ROOT CANAL THERAPY -->
+        <section class="category-section">
+            <h2 class="category-title">🔧 Root Canal Therapy (RCT)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Professional endodontic treatment to save your tooth</p>
+            
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service</th>
+                            <th style="width: 40%; text-align: right;">Price (₦)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="service-name">RCT - Front Tooth</div>
+                                <div class="service-description">Root canal treatment for incisors and canines (single canal)</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦45,000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="service-name">RCT - Back Tooth</div>
+                                <div class="service-description">Root canal treatment for premolars and molars (multiple canals)</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦70,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FILLING SERVICES -->
+        <section class="category-section">
+            <h2 class="category-title">🦷 Dental Fillings</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Professional cavity treatment with aesthetic restoration</p>
+            
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service</th>
+                            <th style="width: 40%; text-align: right;">Price (₦)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="service-name">Composite Filling</div>
+                                <div class="service-description">Tooth-colored filling that blends naturally with your tooth. Modern and aesthetic.</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦30,000</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="service-name">GIC Filling (Glass Ionomer)</div>
+                                <div class="service-description">Fluoride-releasing filling, especially good for children and root surfaces</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦35,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CLEANING & POLISHING -->
+        <section class="category-section">
+            <h2 class="category-title">✨ Cleaning & Polishing</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Professional deep cleaning to maintain oral health</p>
+            
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service</th>
+                            <th style="width: 40%; text-align: right;">Price (₦)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="service-name">Scaling & Polishing</div>
+                                <div class="service-description">Deep cleaning to remove tartar and plaque. Prevents cavities and gum disease.</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦25,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TEETH WHITENING -->
+        <section class="category-section">
+            <h2 class="category-title">⚡ Professional Teeth Whitening</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Get a brighter smile in just one session</p>
+            
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service</th>
+                            <th style="width: 40%; text-align: right;">Price (₦)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="service-name">Professional Teeth Whitening</div>
+                                <div class="service-description">Dramatic whitening results. 1 hour session. Results last 18+ months.</div>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="price-amount">₦40,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PRICE SUMMARY TABLE -->
+        <section class="category-section">
+            <h2 class="category-title">📋 Quick Price Reference</h2>
+            
+            <div class="comparison-box">
+                <div class="comparison-item">
+                    <h4>💰 Most Affordable</h4>
+                    <div class="price">₦25,000</div>
+                    <div class="label">Scaling & Polishing</div>
+                </div>
+                <div class="comparison-item">
+                    <h4>⭐ Most Popular</h4>
+                    <div class="price">₦40,000</div>
+                    <div class="label">Teeth Whitening</div>
+                </div>
+                <div class="comparison-item">
+                    <h4>🏥 Complex Treatment</h4>
+                    <div class="price">₦80,000</div>
+                    <div class="label">Surgical Extraction</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT OPTIONS -->
+        <section class="category-section">
+            <h2 class="category-title">💳 Payment Options</h2>
+            
+            <div class="info-box">
+                <h3>Flexible Payment Methods</h3>
+                <p>
+                    ✅ Cash Payment<br>
+                    ✅ Bank Transfer<br>
+                    ✅ Mobile Money (MTN, Airtel, Glo)<br>
+                    ✅ Payment Plans Available for Major Treatments<br><br>
+                    <strong>Package Discounts:</strong> Get 10-15% off when combining multiple treatments. Contact us for customized quotes!
+                </p>
+            </div>
+        </section>
+
+        <!-- WHAT'S INCLUDED -->
+        <section class="category-section">
+            <h2 class="category-title">✅ What's Included in Our Prices</h2>
+            
+            <div class="info-box">
+                <h3>All Prices Include:</h3>
+                <p>
+                    ✓ Professional consultation<br>
+                    ✓ Local anesthesia (where applicable)<br>
+                    ✓ Quality dental materials<br>
+                    ✓ Expert treatment by licensed dentists<br>
+                    ✓ Follow-up instructions<br>
+                    ✓ 100% patient satisfaction guarantee<br><br>
+                    <strong>No Hidden Charges!</strong> What you see is what you pay.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="contact-cta">
+            <h2>Ready to Transform Your Smile?</h2>
+            <p>Book your appointment today and get professional dental care at government clinic prices</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="booking-form.html" class="cta-button">📅 Book Online Now</a>
+                <a href="tel:+2349125890508" class="cta-button">📞 Call Uselu: +234-912-589-0508</a>
+                <a href="tel:+2349169058409" class="cta-button">📞 Call Muritala: +234-916-905-8409</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Suntop Craniofacial & Dental Clinic. All rights reserved.</p>
+        <p>🏥 NDA Approved | Ministry of Health Registered | 5-Star Patient Satisfaction</p>
+        <p style="font-size: 0.9rem; color: #cbd5e1;">Transparent Pricing • Expert Care • No Hidden Charges • Same-Day Service</p>
+    </footer>
+</body>
+</html>
