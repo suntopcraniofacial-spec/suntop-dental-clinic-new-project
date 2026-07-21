@@ -585,63 +585,51 @@
             <p class="section-subtitle">See the transformations our patients have achieved with Suntop Dental</p>
             
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openGalleryModal('Clinic Interior', '🏥')">
-                    <div class="gallery-image">
-                        <span>🏥</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Gum Treatment Before & After')">
+                    <div class="gallery-image">🏥</div>
                     <div class="gallery-caption">
-                        <h4>Modern Clinic Facility</h4>
-                        <p>State-of-the-art dental equipment and comfortable treatment rooms</p>
+                        <h4>Gum Treatment Before & After</h4>
+                        <p>Professional gum disease treatment and healthy gum restoration</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('Treatment Room', '🦷')">
-                    <div class="gallery-image">
-                        <span>🦷</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Oral Surgery Procedure')">
+                    <div class="gallery-image">🔬</div>
                     <div class="gallery-caption">
-                        <h4>Professional Treatment Room</h4>
-                        <p>Equipped with the latest dental technology for your comfort</p>
+                        <h4>Oral Surgery Procedure</h4>
+                        <p>Advanced surgical extraction and tissue management</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('Before Treatment', '😁')">
-                    <div class="gallery-image">
-                        <span>😁</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Teeth Whitening Transformation')">
+                    <div class="gallery-image">✨</div>
                     <div class="gallery-caption">
-                        <h4>Before Treatment</h4>
-                        <p>Patient before cosmetic dental procedure</p>
+                        <h4>Teeth Whitening Transformation</h4>
+                        <p>Professional whitening results showing before & after</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('Orthodontic Treatment', '🦷')">
-                    <div class="gallery-image">
-                        <span>✨</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Smile Restoration Results')">
+                    <div class="gallery-image">😁</div>
                     <div class="gallery-caption">
-                        <h4>Braces Application</h4>
-                        <p>Professional orthodontic alignment treatment in progress</p>
+                        <h4>Smile Restoration Results</h4>
+                        <p>Successful dental restoration for confident smiles</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('After Whitening', '⭐')">
-                    <div class="gallery-image">
-                        <span>⭐</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Crown Placement')">
+                    <div class="gallery-image">👑</div>
                     <div class="gallery-caption">
-                        <h4>Teeth Whitening Result</h4>
-                        <p>Bright, white smile after professional whitening</p>
+                        <h4>Crown Placement Procedure</h4>
+                        <p>Precision crown installation for tooth restoration</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('Bridge Restoration', '🌟')">
-                    <div class="gallery-image">
-                        <span>🌟</span>
-                    </div>
+                <div class="gallery-item" onclick="openGalleryModal('Healthy Teeth Results')">
+                    <div class="gallery-image">⭐</div>
                     <div class="gallery-caption">
-                        <h4>Dental Bridge</h4>
-                        <p>Successful restoration of missing teeth with dental bridge</p>
+                        <h4>Healthy Teeth Results</h4>
+                        <p>Beautiful, healthy smile after complete treatment</p>
                     </div>
                 </div>
             </div>
@@ -715,26 +703,36 @@
     </div>
 
     <script>
-        function openGalleryModal(title, emoji) {
+        function openGalleryModal(title) {
             const modal = document.getElementById('galleryModal');
             const modalImage = document.getElementById('modalImage');
             
-            // Create a canvas with the emoji to display
+            // Create a canvas with the title to display
             const canvas = document.createElement('canvas');
-            canvas.width = 600;
+            canvas.width = 800;
             canvas.height = 600;
             const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'linear-gradient(135deg, #e0f2fe, #bae6fd)';
-            ctx.fillRect(0, 0, 600, 600);
-            ctx.font = 'bold 200px Arial';
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 800, 600);
+            gradient.addColorStop(0, '#e0f2fe');
+            gradient.addColorStop(1, '#bae6fd');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 800, 600);
+            
+            // Add title
+            ctx.font = 'bold 36px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillText(emoji, 300, 300);
-            
-            // Add title text
-            ctx.font = 'bold 40px Arial';
             ctx.fillStyle = '#0b1e36';
-            ctx.fillText(title, 300, 550);
+            ctx.fillText(title, 400, 300);
+            
+            // Add decorative elements
+            ctx.strokeStyle = '#0ea5e9';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(400, 150, 40, 0, Math.PI * 2);
+            ctx.stroke();
             
             modalImage.src = canvas.toDataURL();
             modal.style.display = 'block';
