@@ -15,11 +15,14 @@
     .row { display:flex; gap:12px; }
     .row .col { flex:1; }
     button { margin-top:16px; padding:10px 16px; background:#0b63ff; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+    button.secondary { background:#25D366; } /* WhatsApp green */
     button:disabled { opacity:.6; cursor:not-allowed; }
-    .success, .error { margin-top:12px; padding:10px; border-radius:6px; }
+    .success, .error, .info { margin-top:12px; padding:10px; border-radius:6px; }
     .success { background:#e6f8ee; color:#0b6b36; }
     .error { background:#ffecec; color:#9b1c1c; }
+    .info { background:#eef6ff; color:#054ea6; }
     small.note { color:#556; display:block; margin-top:6px; }
+    .inline { display:inline-block; vertical-align:middle; }
   </style>
 </head>
 <body>
@@ -37,7 +40,7 @@
           <input id="email" name="email" type="email" placeholder="you@example.com" required />
         </div>
         <div class="col">
-          <label for="phone">Phone</label>
+          <label for="phone">Phone (WhatsApp)</label>
           <input id="phone" name="phone" type="tel" placeholder="+234 800 000 0000" required />
         </div>
       </div>
@@ -79,15 +82,86 @@
       <label for="notes">Notes / Additional information</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Any relevant details (allergies, previous treatment, etc.)"></textarea>
 
-      <button id="submitBtn" type="submit">Request Booking</button>
+      <label class="inline" for="emailReminder"><input id="emailReminder" name="emailReminder" type="checkbox" /> I want an optional email reminder for my appointment</label>
+      <div id="reminderOptions" style="display:none; margin-top:8px;">
+        <label for="reminderTiming">Reminder timing</label>
+        <select id="reminderTiming" name="reminderTiming">
+          <option value="1_day">1 day before</option>
+          <option value="12_hours">12 hours before</option>
+          <option value="2_hours">2 hours before</option>
+        </select>
+        <small class="note">We will send a one-time email reminder at the selected time before the appointment.</small>
+      </div>
+
+      <div style="margin-top:12px;">
+        <button id="submitBtn" type="submit">Request Booking</button>
+        <button id="waBtn" type="button" class="secondary" style="margin-left:8px;">Contact Branch on WhatsApp</button>
+      </div>
 
       <div id="message"></div>
+      <div id="waInfo" style="margin-top:12px;"></div>
     </form>
 
     <script>
+      // Configure branch WhatsApp numbers here (E.164 without +, e.g. 2348012345678)
+      const branchWhatsApp = {
+        uselu: '2348012345678', // replace with Uselu clinic WhatsApp number (country code + number, no +)
+        mm: '2348098765432'    // replace with MM clinic WhatsApp number
+      };
+
       const form = document.getElementById('bookingForm');
       const messageDiv = document.getElementById('message');
       const submitBtn = document.getElementById('submitBtn');
+      const waBtn = document.getElementById('waBtn');
+      const branchSelect = document.getElementById('branch');
+      const waInfo = document.getElementById('waInfo');
+      const emailReminder = document.getElementById('emailReminder');
+      const reminderOptions = document.getElementById('reminderOptions');
+
+      function showMessage(text, type) {
+        messageDiv.innerHTML = `<div class="${type}">${text}</div>`;
+      }
+
+      function formatWhatsAppLink(number, text) {
+        if (!number) return null;
+        const encoded = encodeURIComponent(text);
+        return `https://wa.me/${number}?text=${encoded}`;
+      }
+
+      function updateWhatsAppInfo() {
+        const branch = branchSelect.value;
+        const number = branch ? branchWhatsApp[branch] : null;
+        if (number) {
+          waInfo.innerHTML = `<div class="info">Branch WhatsApp: <strong>+${number}</strong></div>`;
+          waBtn.disabled = false;
+        } else {
+          waInfo.innerHTML = '';
+          waBtn.disabled = true;
+        }
+      }
+
+      branchSelect.addEventListener('change', updateWhatsAppInfo);
+      updateWhatsAppInfo();
+
+      waBtn.addEventListener('click', () => {
+        const branch = branchSelect.value;
+        const number = branch ? branchWhatsApp[branch] : null;
+        if (!number) {
+          showMessage('Please select a branch to contact on WhatsApp.', 'error');
+          return;
+        }
+        const name = form.fullname.value.trim() || 'Patient';
+        const treatment = form.treatment.value || 'appointment';
+        const date = form.date.value || '';
+        const time = form.time.value || '';
+        const text = `Hello, I am ${name}. I would like to book a ${treatment} at the ${branchSelect.options[branchSelect.selectedIndex].text} branch on ${date} ${time}.`;
+        const url = formatWhatsAppLink(number, text);
+        window.open(url, '_blank');
+      });
+
+      emailReminder.addEventListener('change', () => {
+        reminderOptions.style.display = emailReminder.checked ? 'block' : 'none';
+      });
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -107,7 +181,16 @@
         }
 
         const payload = {
-          fullname, email, phone, treatment, branch, date, time: form.time.value || null, notes: form.notes.value.trim() || null,
+          fullname,
+          email,
+          phone,
+          treatment,
+          branch,
+          date,
+          time: form.time.value || null,
+          notes: form.notes.value.trim() || null,
+          emailReminder: emailReminder.checked,
+          reminderTiming: emailReminder.checked ? document.getElementById('reminderTiming').value : null,
           submittedAt: new Date().toISOString()
         };
 
@@ -122,7 +205,19 @@
 
           if (res.ok) {
             showMessage('Booking request submitted successfully. We will contact you to confirm.', 'success');
+            // Show WhatsApp quick link to contact branch if numbers configured
+            const branchNumber = branchWhatsApp[branch];
+            if (branchNumber) {
+              const waText = `Hi, my name is ${fullname}. I submitted a booking request for ${treatment} on ${date} ${payload.time || ''}. Please confirm.`;
+              const waLink = formatWhatsAppLink(branchNumber, waText);
+              waInfo.innerHTML = `<div class="success">You can also message the branch on WhatsApp to follow up: <a href="${waLink}" target="_blank" rel="noopener">Send WhatsApp message</a></div>`;
+            }
+
+            // Reset form but keep branch selection so users can contact via WhatsApp if needed
+            const selectedBranch = form.branch.value;
             form.reset();
+            form.branch.value = selectedBranch;
+            updateWhatsAppInfo();
           } else {
             const text = await res.text();
             showMessage('Failed to submit booking: ' + (text || res.statusText), 'error');
@@ -133,11 +228,8 @@
           submitBtn.disabled = false;
         }
       });
-
-      function showMessage(text, type) {
-        messageDiv.innerHTML = `<div class="${type}">${text}</div>`;
-      }
     </script>
+
   </div>
 </body>
 </html>
