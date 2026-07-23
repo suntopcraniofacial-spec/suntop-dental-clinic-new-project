@@ -1,113 +1,260 @@
-html<!-- PICTURE & CLINICAL CASES SECTION -->
-<section id="gallery" style="padding: 4rem 2rem; background-color: var(--bg-body);">
-    <div style="max-width: 1200px; margin: 0 auto;">
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- HIGH-RANKING SEO METADATA FOR GOOGLE BOTS -->
+    <title>Best Dental Clinic in Benin City | Suntop Craniofacial & Dental Treatment Prices</title>
+    <meta name="description" content="Looking for the best dental clinic in Benin City for affordable dental treatments and prices? Suntop Dental offers expert orthodontic braces, painless teeth filling, professional teeth whitening, and advanced maxillofacial surgery for jaw swelling, ameloblastoma, OKC, and jaw cancer at Uselu & Muritala Muhammad Way.">
+    <meta name="keywords" content="best dental clinic in benin city, dental treatments and prices in benin, where can i get braces in benin, teeth filling in benin city, professional teeth whitening benin, teeth cleaning and polishing benin, affordable dentist edo state, top rated dental clinic near me, NDA approved dental clinic benin, ministry of health approved dentist edo, jaw swelling treatment benin city, maxillofacial surgeon in benin, ameloblastoma surgery nigeria, odontogenic keratocyst treatment, jaw cancer surgeon edo state">
+    <meta name="author" content="Suntop Craniofacial and Dental Clinic">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="NG-ED">
+    <meta name="geo.placename" content="Benin City">
+
+    <!-- Open Graph Social Media Meta Tags -->
+    <meta property="og:title" content="Suntop Craniofacial & Dental Clinic | Best Dental Clinic in Benin City">
+    <meta property="og:description" content="Affordable dental treatments and prices in Benin City. Get permanent braces, teeth whitening, deep cleaning, and specialized maxillofacial surgery for jaw tumors today.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Local Business Map Schema -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Suntop Craniofacial and Dental Clinic - Uselu Branch",
+        "description": "Top-rated dental clinic in Benin City specializing in braces, teeth whitening, extractions, and maxillofacial surgery.",
+        "image": "https://suntopdental.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "127 Uselu, Success Pharmacy Building, Opposite NNPC",
+          "addressLocality": "Benin City",
+          "addressRegion": "Edo State",
+          "addressCountry": "NG"
+        },
+        "url": "https://suntopdental.com",
+        "telephone": "+2349125890508",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "00:00",
+            "closes": "23:59",
+            "description": "Emergency services only"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Suntop Craniofacial and Dental Clinic - Muritala Muhammad Way Branch",
+        "description": "Best dental clinic in Benin City for teeth cleaning, crowns, fillings, and orthodontic treatments.",
+        "image": "https://suntopdental.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "29 Muritala Muhammad Way, Opposite MTN",
+          "addressLocality": "Benin City",
+          "addressRegion": "Edo State",
+          "addressCountry": "NG"
+        },
+        "url": "https://suntopdental.com",
+        "telephone": "+2349169058409",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "00:00",
+            "closes": "23:59",
+            "description": "Emergency services only"
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <style>
+        /* Modern Premium Palette Variables */
+        :root {
+            --primary: #0b1e36;       /* Elite Deep Luxury Navy */
+            --accent: #0ea5e9;        /* Bright Clinical Medical Sky Blue */
+            --teal-soft: #06b6d4;     /* Vibrant Pure Tech Teal */
+            --bg-body: #f8fafc;       /* Crisp Sterile Clean Background */
+            --bg-card: #ffffff;       /* Pure White Elevated Blocks */
+            --text-main: #0f172a;     /* Sharp Premium Charcoal Body Text */
+            --text-muted: #475569;    /* Balanced Slate Secondary Subtitles */
+            --success-green: #22c55e; /* Vibrant Global WhatsApp Green */
+        }
+
+        /* Global Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
         
-        <h2 style="font-size: 2.2rem; color: var(--primary); text-align: center; margin-bottom: 2rem;">
-            Our Treatment Gallery & Clinical Cases
-        </h2>
+        /* Navigation Bar Layout Styles */
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(11, 30, 54, 0.15);
+            border-bottom: 2px solid var(--accent);
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        header .logo span {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        nav .social-nav {
+            border-left: 1px solid rgba(255,255,255,0.15);
+            padding-left: 1.2rem;
+            margin-left: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        nav .social-nav a {
+            margin-left: 0;
+            font-size: 0.85rem;
+        }
+        
+        /* Branding Hero Section Panel */
+        .hero {
+            background: linear-gradient(135deg, #071424 0%, #0b1e36 40%, #0369a1 100%);
+            color: #fff;
+            text-align: center;
+            padding: 8rem 2rem;
+            box-shadow: inset 0 -10px 30px rgba(0,0,0,0.15);
+            border-bottom: 4px solid var(--teal-soft);
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #e0f2fe, #bae6fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.8rem;
+            color: #cbd5e1;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        .hero .btn {
+            background: linear-gradient(to right, var(--accent), var(--teal-soft));
+            color: #fff;
+            padding: 1.1rem 3rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+        .hero .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 26px rgba(14, 165, 233, 0.6);
+        }
 
-        <!-- GRID WRAPPER -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            
-            <!-- General & Cosmetic Dentistry -->
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/braces.jpg" alt="Orthodontic Braces Treatment" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Orthodontic Braces</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/composite.jpg" alt="Composite Bonding & Teeth Filling" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Composite Fillings</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/cleaning.jpg" alt="Teeth Cleaning and Polishing" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Teeth Cleaning & Polishing</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/whitening.jpg" alt="Professional Teeth Whitening" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Teeth Whitening</p>
-            </div>
-
-            <!-- Crowns & Bridges -->
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/bridge.jpg" alt="Dental Bridge Treatment Case 1" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Dental Bridge Case 1</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/bridge2.jpg" alt="Dental Bridge Treatment Case 2" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Dental Bridge Case 2</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/pfm.jpg" alt="Porcelain Fused to Metal Crown" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">PFM Crowns</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/zerconia.jpg" alt="Zirconia Crown Treatment" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Zirconia Crowns</p>
-            </div>
-
-            <!-- Endodontics & Surgery -->
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/rct.jpg" alt="Root Canal Treatment" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Root Canal Treatment (RCT)</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/wisdom-tooth.jpg" alt="Wisdom Tooth Extraction" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Wisdom Tooth Surgery</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/impacted-incisor.jpg" alt="Impacted Incisor Treatment" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Impacted Incisor Treatment</p>
-            </div>
-
-            <!-- Advanced Craniofacial Surgery -->
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/mandibulectomy.jpg" alt="Mandibulectomy Jaw Tumor Surgery" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Mandibulectomy Surgery</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/maxillectomy.jpg" alt="Maxillectomy Upper Jaw Surgery" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Maxillectomy Surgery</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/reconstruction.jpg" alt="Jaw Reconstruction Surgery" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Jaw Reconstruction</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/cleft-lip.jpg" alt="Cleft Lip Corrective Surgery" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Cleft Lip Repair</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/cleft-palate.jpg" alt="Cleft Palate Corrective Surgery" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Cleft Palate Repair</p>
-            </div>
-
-            <!-- Facility & Infrastructure -->
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/interior.jpg" alt="Suntop Dental Clinic Interior Reception" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Clinic Reception</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/interior2.jpg" alt="Suntop Dental Treatment Room" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Surgery Operatory</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/exterior.jpg" alt="Suntop Dental Clinic Building Exterior" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                <p style="padding: 1rem; font-weight: 600; color: var(--primary); text-align: center;">Clinic Exterior</p>
-            </div>
-
-            <div style="background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <img src="images/x-ray.jpg" alt="Advanced Dental X-Ray Equipment" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+        /* Gallery Page Layout Components */
+        .picture-section {
+            padding: 5rem 2rem;
+            background-color: var(--bg-body);
+        }
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(11, 30, 54, 0.08);
+        }
+        .gallery-card img, .gallery-card video {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            background-color: #eaeef3;
+        }
+        .gallery-card p {
+            padding: 1.2rem;
